@@ -5,12 +5,12 @@ const handleCastErrorDB = (err) => {
 };
 const handleDuplicateFieldsDB = (err) => {
   const value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0];
-  // const value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0]; // deh 7aga kda ba RE 3lshan t3ml match w tegb al field ale ana ktbtw ale hwa duplicate
+  // const value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0]; 
   const message = `Duplicate field value ${value} please use another value!`;
   return new AppError(message, 400);
 };
 const handleValidationErrorDB = (err) => {
-  const errors = Object.values(err.errors).map((el) => el.message); // btegb kol al message bta3t ale error fe al object (y3ny yzhr kol message al error lw fe error)
+  const errors = Object.values(err.errors).map((el) => el.message); 
   const message = `Invalid input data. ${errors.join(". ")}`;
   return new AppError(message, 400);
 };

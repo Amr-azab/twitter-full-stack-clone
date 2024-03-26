@@ -16,41 +16,23 @@ app.use(
     origin: "http://localhost:3000",
     credentials: true,
   })
-);
-app.options("*", cors());
-const morgan = require("morgan");
+); // connection front with back while diffrenet domain
+app.options("*", cors()); // handle cors to all route
+const morgan = require("morgan"); // log information
 app.use(morgan("dev"));
-app.use(express.json());
+app.use(express.json()); // parse incoming request data with json
 
-// app.use(helmet());
-// console.log(process.env.NODE_ENV);
-// if (process.env.NODE_ENV === 'development') {
-//   app.use(morgan('dev'));
-// }
-// const limiter = rateLimit({
-//   max: 100,
-//   windowMs: 60 * 60 * 1000,
-//   message: 'Too many requests from this IP, please try again in an hour!',
-// });
-// app.use('/api', limiter);
-// Body parser, reading data from body into req.body
-// app.use(express.json({ limit: '10kb' }));
-// app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser());
-// app.use(cors());
 
-// Data sanitization against NoSQL query injection
-// app.use(mongoSanitize());
-
-// app.use((req, res, next) => {
-//   req.requestTime = new Date().toISOString();
-//   next();
-// });
 app.use("/api/twitter/user/", usersRouter);
 app.use("/api/twitter/tweet/", tweetsRouter);
+app.use(express.static(`${__dirname}/build`));
 app.all("*", (req, res, next) => {
-  next(new AppError(`Can't find this url on the server`, 400));
+  res.sendFile(`${__dirname}/build/index.html`);
 });
+// app.all("*", (req, res, next) => {
+//   next(new AppError(`Can't find this url on the server`, 400));
+// });
 
 app.use(globalErrorHandler);
 

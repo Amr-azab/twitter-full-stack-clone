@@ -44,7 +44,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide a password!"],
     minlength: [8],
-    select: false, // 3lshan mtzhar4
+    select: false,
   },
   passwordConfirm: {
     type: String,
@@ -108,7 +108,7 @@ userSchema.methods.correctPassword = async function (
   userpassword
 ) {
   return await bcrypt.compare(candidatePassword, userpassword);
-}; // 3lshan y4ofham same wla false
+};
 userSchema.methods.changedPasswordAfter = function (JWTTimeStamp) {
   if (this.passwordChangedAt) {
     const changedTimesTamp = parseInt(

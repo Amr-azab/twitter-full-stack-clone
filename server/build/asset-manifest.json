@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.20621157.css",
+    "main.js": "/static/js/main.e8c8a21d.js",
+    "static/js/377.ccfaec47.chunk.js": "/static/js/377.ccfaec47.chunk.js",
+    "static/media/CenaWWE.jpg": "/static/media/CenaWWE.376a59ea4a74b73facb8.jpg",
+    "static/media/romanwwe.jpg": "/static/media/romanwwe.93271b1b3b279e38c487.jpg",
+    "static/media/walterwhite.jpg": "/static/media/walterwhite.7e3585820d440e682b28.jpg",
+    "static/media/kareem.jpg": "/static/media/kareem.220df249c21f2d0d526c.jpg",
+    "static/media/default.jpg": "/static/media/default.84fa46fb9bf3bceb700b.jpg",
+    "index.html": "/index.html",
+    "main.20621157.css.map": "/static/css/main.20621157.css.map",
+    "main.e8c8a21d.js.map": "/static/js/main.e8c8a21d.js.map",
+    "377.ccfaec47.chunk.js.map": "/static/js/377.ccfaec47.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20621157.css",
+    "static/js/main.e8c8a21d.js"
+  ]
+}
