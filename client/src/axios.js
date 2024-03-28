@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:8000/api/twitter/",
+  baseURL: "https://twitter-full-stack.onrender.com/api/twitter",
   withCredentials: true,
 });
 
