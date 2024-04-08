@@ -336,7 +336,7 @@ export const Box = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 35%;
+  width: 50%;
   background-color: ${({ theme }) => theme.theme.PbackgroundColor};
   box-shadow: 0rem 0rem 2rem grey;
   display: flex;

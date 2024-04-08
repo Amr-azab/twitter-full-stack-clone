@@ -3,8 +3,8 @@ import { styled, css } from "styled-components";
 export const Button = styled.button`
   border-radius: 2rem;
   border: none;
-  padding: 0.5rem;
-  font-size: 0.9rem;
+  padding: 0.8rem;
+  font-size: 1.3rem;
   font-weight: bold;
   background-color: ${({ theme }) => theme.buttonTheme.color};
   color: #ffffff;
@@ -173,7 +173,7 @@ export const DoneButtons = styled.button`
   padding: 1rem;
   border: none;
   border-radius: 5rem;
-  width: 20%;
+  width: 30%;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;

@@ -8,7 +8,7 @@ export const P = styled.p`
 
   font-weight: ${({ bold }) => (bold ? "bold" : "")};
   padding-top: 0.4rem;
-  font-size: ${(props) => (props.username ? "1rem" : "1.2rem")};
+  font-size: ${(props) => (props.username ? "1.4rem" : "1.6rem")};
 `;
 
 export const UserTweet = styled.p`
